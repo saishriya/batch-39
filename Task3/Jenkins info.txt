@@ -1,0 +1,15 @@
+Execute this Pipeline or any of its stages, on any available agent.
+Defines the "Build" stage. stage blocks are optional in Scripted Pipeline syntax. However, implementing stage blocks in a Scripted Pipeline provides clearer visualization of each `stage’s subset of tasks/steps in the Jenkins UI.
+Perform some steps related to the "Build" stage.
+Defines the "Test" stage.
+Perform some steps related to the "Test" stage.
+Defines the "Deploy" stage.
+Perform some steps related to the "Deploy" stage
+
+pipeline is Declarative Pipeline-specific syntax that defines a "block" containing all content and instructions for executing the entire Pipeline.
+agent is Declarative Pipeline-specific syntax that instructs Jenkins to allocate an executor (on a node) and workspace for the entire Pipeline.
+stage is a syntax block that describes a stage of this Pipeline. Read more about stage blocks in Declarative Pipeline syntax on the Pipeline syntax page. As mentioned above, stage blocks are optional in Scripted Pipeline syntax.
+steps is Declarative Pipeline-specific syntax that describes the steps to be run in this stage.
+sh is a Pipeline step (provided by the Pipeline: Nodes and Processes plugin) that executes the given shell command.
+junit is another a Pipeline step (provided by the JUnit plugin) for aggregating test reports.
+node is Scripted Pipeline-specific syntax that instructs Jenkins to execute this Pipeline (and any stages contained within it), on any available agent/node. This is effectively equivalent to agent in Declarative Pipeline-specific syntax.
